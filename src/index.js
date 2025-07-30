@@ -4,8 +4,8 @@ const { URL } = require('url');
 
 const server = http.createServer((request, response) => {
   const parsedUrl = new URL(`http://localhost:3000${request.url}`);
-
   console.log(`Request method: ${request.method} | Endpoint: ${parsedUrl.pathname}`);
+
   let { pathname } = parsedUrl;
   let id = null;
   const splitEndpoint = pathname.split('/').filter(Boolean);
